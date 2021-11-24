@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Taberna - Teslimat</title>
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="navigation" id="side-nav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeHamburger()"
+        >&times;</a
+      >
+      <a href="index.html">Anasayfa</a>
+      <div style="display: flex; justify-content: stretch;">
+        <a href="about.html">Hakkımızda</a>
+      </div>
+      <div class="product-listopener"> 
+        <a href="#" onclick="openProdList()">Ürünlerimiz</a>
+        <a href="#" id="product-close" onclick="closeProdList()" style="align-items: center; visibility: hidden;">
+          <i class="fas fa-sort-down"></i>
+        </a>
+      </div>
+      <div id="product-list" style="display: none; overflow: hidden;">
+        <ul>
+          <li>
+            <a href="products.html">Elmalı</a>
+            <a href="products.html">Klasik</a>
+            <a href="products.html">Litrelik</a>
+          </li>
+        </ul>
+      </div>
+      <div class="product-listopener"> 
+        <a href="#" onclick="openDepList()">Birimlerimiz</a>
+        <a href="#" id="dep-close" onclick="closeDepList()" style="align-items: center; visibility: hidden;">
+          <i class="fas fa-sort-down"></i>
+        </a>
+      </div>
+      <div id="dep-list" style="display: none; overflow: hidden;">
+        <ul>
+          <li>
+            <a href="production.html">Üretim</a>
+            <a href="delivery.html">Teslimat</a>
+            <a href="publicrelations.html">Halkla İlişkiler</a>
+          </li>
+        </ul>
+      </div>
+      <a href="contact.html">İletişim</a>
+    </div>
+
+    <nav class="header">
+      <ul>
+        <li class="inline">
+          <a class="menubtn" onclick="openHamburger()">
+            <img class="filtered" src="./assets/hamburger.png" id="menuclosed" />
+          </a>
+        </li>
+        <li class="inline">
+          <a href="index.html">
+            <img class="filtered" src="./assets/tabernalogo.png" id="brandlogo" />
+          </a>
+        </li>
+        <li class="inline">
+          <img src="./assets/search.png" class="filtered" id="search" style="visibility: hidden;" />
+        </li>
+      </ul>
+    </nav>
+
+    <div class="contact-bg">
+      <h3>TESLİMAT</h3>
+      <h2>TESLİMAT BİRİMİMİZ</h2>
+      <div class="line">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="news">
+      <h1 style="padding-bottom: 10px;">Teslimat Birimi</h1>
+      <p style="padding-bottom: 10px;">Taberna Teslimat Birimi, canla başla ve sevgiyle üretmiş olduğumuz Taberna ürünlerimizi sizlere ulaştıran pazarlara ve dükkanlara teslim etmekle sorumlu bir birimdir.</p>
+      <p style="padding-bottom: 50px;">Teslimat birimimiz kendi içerisinde masa başı ve saha departmanları olarak bölünmüştür, masa başı departmanlarında teslimat adreslerinin belirlenmesi, paketlenme çalışmaları ve servis çalışmaları yürütülür; genellikle bu işlemler merkez ofisimizde ve fabrikalarımızda yürütülmektedir. Saha departmanı ise kendi araçlarımız ile masa başı departmanının verdiği teslimatları gerekli adreslere teslim etmekle yükümlüdür. Araçlarımız yeni ve çalışanlarımızın konforunu düşünülerek tasarlanmış araçlardır.</p>
+    </div>
+
+    <footer class="footer">
+      <li>
+        <img
+          class="filtered"
+          src="./assets/tabernalogo.png"
+          id="brandlogo"
+        />
+        <li>
+          <ul>
+            <div class="footer-links">
+              <div class="social-links">
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-youtube"></a>
+              </div>
+            </div>    
+          </ul>
+          <ul>
+            <span class="footer-text"
+          >&copy; Kaan Yıldırım Eser & Hasan Koç - 2021</span>
+          </ul>
+        </li>
+      </li>
+    </footer>
+  </body>
+
+  <script>
+    function openHamburger() {
+      document.getElementById("side-nav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    function closeHamburger() {
+      document.getElementById("side-nav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+  <script>
+    function openProdList() {
+      document.getElementById("product-close").style.visibility = "visible";
+      document.getElementById("product-list").style.display = "block";
+    }
+    function closeProdList() {
+      document.getElementById("product-list").style.display = "none";
+      document.getElementById("product-close").style.visibility = "hidden";
+    }
+    function openDepList() {
+      document.getElementById("dep-list").style.display = "block";
+      document.getElementById("dep-close").style.visibility = "visible";
+    }
+    function closeDepList() {
+      document.getElementById("dep-list").style.display = "none";
+      document.getElementById("dep-close").style.visibility = "hidden";
+    }
+  </script>
+  <script>
+    var popup = document.getElementById("news-popup");
+    var btn = document.getElementsByClassName("card-news");
+    var close = document.getElementsByClassName("close")[0];
+
+    var i = 0;
+    while (i != btn.length) {
+      btn[i].onclick = function(e) {
+        if (e.path.length == 9) {
+          var elem = e.path[1];
+        } else {
+          var elem = e.path[0];
+        }
+        
+        popup.style.display = "block";
+        var title = document.getElementById("popup-h2");
+        title.innerHTML = elem.children[0].innerText;
+        var date = document.getElementById("popup-h6");
+        date.innerHTML = elem.children[1].innerText;
+      }
+      i++;
+    }
+
+    close.onclick = function() {
+      popup.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Taberna - İletişim</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="navigation" id="side-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeHamburger()"
+      >&times;</a
+    >
+    <a href="index.html">Anasayfa</a>
+    <div style="display: flex; justify-content: stretch;">
+      <a href="about.html">Hakkımızda</a>
+    </div>
+    <div class="product-listopener"> 
+      <a href="#" onclick="openProdList()">Ürünlerimiz</a>
+      <a href="#" id="product-close" onclick="closeProdList()" style="align-items: center; visibility: hidden;">
+        <i class="fas fa-sort-down"></i>
+      </a>
+    </div>
+    <div id="product-list" style="display: none; overflow: hidden;">
+      <ul>
+        <li>
+          <a href="products.html">Elmalı</a>
+          <a href="products.html">Klasik</a>
+          <a href="products.html">Litrelik</a>
+        </li>
+      </ul>
+    </div>
+    <div class="product-listopener"> 
+      <a href="#" onclick="openDepList()">Birimlerimiz</a>
+      <a href="#" id="dep-close" onclick="closeDepList()" style="align-items: center; visibility: hidden;">
+        <i class="fas fa-sort-down"></i>
+      </a>
+    </div>
+    <div id="dep-list" style="display: none; overflow: hidden;">
+      <ul>
+        <li>
+          <a href="production.html">Üretim</a>
+            <a href="delivery.html">Teslimat</a>
+            <a href="publicrelations.html">Halkla İlişkiler</a>
+        </li>
+      </ul>
+    </div>
+    <a href="contact.html">İletişim</a>
+  </div>
+
+  <nav class="header">
+    <ul>
+      <li class="inline">
+        <a class="menubtn" onclick="openHamburger()">
+          <img class="filtered" src="./assets/hamburger.png" id="menuclosed" />
+        </a>
+      </li>
+      <li class="inline">
+        <a href="index.html">
+          <img class="filtered" src="./assets/tabernalogo.png" id="brandlogo" />
+        </a>
+      </li>
+      <li class="inline">
+        <img src="./assets/search.png" class="filtered" id="search" style="visibility: hidden;" />
+      </li>
+    </ul>
+  </nav>
+
+  <section class="contact-section">
+    <div class="contact-bg">
+      <h3>BİZE ULAŞIN!</h3>
+      <h2>SORUN VAR MI?
+        SİZDEN DİNLEMEK İSTİYORUZ.</h2>
+      <div class="line">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p class="text">Ürün ve hizmetlerimizle ilgili talep ve önerilerinizi değerlendirerek size en kısa sürede yanıt
+        vermek için tüm çözüm kanallarımızla yanınızdayız. Tüm iletişim kanallarımızdan bize ulaşarak sorularınıza en
+        kısa zamanda cevap bulabilirsiniz.
+      </p>
+    </div>
+
+
+    <div class="contact-body">
+      <div class="contact-info">
+        <div>
+          <span><i class="fas fa-mobile-alt"></i></span>
+          <span>Bizi Arayın</span>
+          <span class="text">262 331 6060</span>
+        </div>
+        <div>
+          <span><i class="fas fa-envelope-open"></i></span>
+          <span>Bize Mail Atın</span>
+          <span class="text">mail@taberna.com</span>
+        </div>
+        <div>
+          <span><i class="fas fa-map-marker-alt"></i></span>
+          <span>Bizi Ziyaret Edin</span>
+          <span class="text">Kabaoğlu, Baki Komsuoğlu Bulvarı No: 515, Umuttepe, 41001</span>
+        </div>
+        <div>
+          <span><i class="fas fa-clock"></i></span>
+          <span>Açılış Saatlerimiz</span>
+          <span class="text">Pazartesi - Cuma (9:00 - 17:00)</span>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form>
+          <input type="text" class="form-control" placeholder="Şikayet/Önerinin Konusu">
+          <div>
+            <input type="text" class="form-control" placeholder="Adınız">
+            <input type="text" class="form-control" placeholder="Soyadınız">
+          </div>
+          <div>
+            <input type="email" class="form-control" placeholder="E-Posta Adresiniz">
+            <input type="text" class="form-control" placeholder="Telefon Numaranız">
+          </div>
+          <textarea rows="5" placeholder="Mesajınız" class="form-control"></textarea>
+          <input type="submit" class="send-btn" value="GÖNDER">
+        </form>
+
+        <div>
+          <img src="./assets/vector.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12077.025021074343!2d29.9217153!3d40.8223347!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc81fa849234e8755!2sKocaeli%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1637429163600!5m2!1str!2str"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+  <footer class="footer">
+    <li>
+      <img
+        class="filtered"
+        src="./assets/tabernalogo.png"
+        id="brandlogo"
+      />
+      <li>
+        <ul>
+          <div class="footer-links">
+            <div class="social-links">
+              <a href="#" class="fab fa-instagram"></a>
+              <a href="#" class="fab fa-facebook-f"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-youtube"></a>
+            </div>
+          </div>    
+        </ul>
+        <ul>
+          <span class="footer-text"
+        >&copy; Kaan Yıldırım Eser & Hasan Koç - 2021</span>
+        </ul>
+      </li>
+    </li>
+  </footer>
+</body>
+
+<script>
+  function openHamburger() {
+    document.getElementById("side-nav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  function closeHamburger() {
+    document.getElementById("side-nav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+<script>
+  function openProdList() {
+      document.getElementById("product-close").style.visibility = "visible";
+      document.getElementById("product-list").style.display = "block";
+    }
+    function closeProdList() {
+      document.getElementById("product-list").style.display = "none";
+      document.getElementById("product-close").style.visibility = "hidden";
+    }
+    function openDepList() {
+      document.getElementById("dep-list").style.display = "block";
+      document.getElementById("dep-close").style.visibility = "visible";
+    }
+    function closeDepList() {
+      document.getElementById("dep-list").style.display = "none";
+      document.getElementById("dep-close").style.visibility = "hidden";
+    }
+</script>
+
+</html>
